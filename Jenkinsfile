@@ -25,6 +25,7 @@ pipeline {
             steps {
                 echo 'Running unit tests...'
                 sh 'mvn test'
+                sh 'mvn clean package -DskipTests'
             }
             post {
                 always {
